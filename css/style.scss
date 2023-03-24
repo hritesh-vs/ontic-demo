@@ -1,0 +1,52 @@
+%scroll-y {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Core variables and mixins
+@import 'base-partial/atoms/_variables.scss';
+@import 'base-partial/atoms/_mixin.scss';
+
+// Normalize and reset
+@import 'base-partial/atoms/_reset-and-normalize.scss';
+
+// atoms styleguide level scss will come here
+@import 'base-partial/atoms/_typography.scss';
+@import 'base-partial/atoms/_patterns.scss';
+@import 'base-partial/atoms/_button-groups.scss';
+@import 'base-partial/atoms/_nav.scss';
+@import 'base-partial/atoms/_extend.scss';
+
+// Molecules - component level scss will come here
+@import 'base-partial/molecules/_form.scss';
+@import 'base-partial/molecules/_drawer.scss';
+@import 'base-partial/molecules/_tags.scss';
+@import 'base-partial/molecules/_carousel.scss';
+@import 'base-partial/molecules/_switcher-tab.scss';
+@import 'base-partial/molecules/_tabs.scss';
+@import 'base-partial/molecules/_accordion.scss';
+@import 'base-partial/molecules/_table.scss';
+@import 'base-partial/molecules/_popup.scss';
+@import 'base-partial/molecules/_card.scss';
+@import 'base-partial/molecules/_autocomplete.scss';
+@import 'base-partial/molecules/_chat-box.scss';
+
+// Organisms
+@import 'base-partial/organisms/_bullet-list.scss';
+@import 'base-partial/organisms/_row-list.scss';
+@import 'base-partial/organisms/_flt-tag-list.scss';
+@import 'base-partial/organisms/_cb-list.scss';
+
+// Motion
+@import 'base-partial/motion/_ng-animate.scss';
+
+//templates
+@import 'base-partial/templates/_grid.scss';
+
+@import 'base-partial/templates/_header.scss';
+@import 'base-partial/templates/_container.scss';
+@import 'base-partial/templates/_footer.scss';
+
+// Pages
+@import 'base-partial/pages/_home.scss';
+

@@ -1,0 +1,188 @@
+.popup{
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    z-index: 10;
+    height: 100%;
+    @extend .flex-center;
+    top: 0;
+    left:0;
+    background-color: rgba(000,000,000,0.8);
+    z-index: 100;
+
+    .popup-pad{
+        padding:25px 20px 20px;
+        @media screen and (max-width: 320px) {
+            padding:20px;
+        }
+    }
+    .popup-inner{
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 13px;
+        z-index: 10;
+        margin: 0 auto;
+        // overflow: hidden;
+        position: relative;
+    
+        @media screen and (max-width: 320px) {
+            // max-width: 290px;
+        }
+    }
+    &.sm-popup{
+        .popup-inner{
+            max-width: 400px;  
+        }
+    }
+
+    &.mid-popup{
+        .popup-inner{
+            max-width: 500px;  
+        }
+    }
+
+    .popup-content{
+        h3{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: #1f1f1f;
+        }
+    }
+    .popup-footer{
+        .text-link{
+            @extend .flex-center;
+            height: 56px;
+        }
+    }
+    .form-small-field{
+        display: flex;
+        input{flex:1;}
+    }
+
+    .owl-carousel{
+        overflow: unset;
+        margin-top: -30px;
+        .owl-nav{
+            position: absolute;
+            bottom: -55px;
+            left: 0;
+            right: 0;
+            width: 100px;
+            margin: auto;
+        }
+        .owl-nav [class*=owl-]{
+            border-radius: 15px;
+            width: 30px;
+            height:30px;
+            padding:0;
+            background: url("../images/back-arrow.svg") no-repeat center center;
+            opacity: 1;
+            text-indent: -9999px;
+            background-color: #fff;
+            background-size: 8px;
+            margin:10px;
+        }
+        .owl-nav [class*=owl-]:hover{
+            background: url("../images/back-arrow.svg") no-repeat center center;
+            background-color: #fff;
+            background-size: 8px;
+            opacity: 1;
+        }
+        .owl-nav .owl-next{
+            transform: rotate(180deg);
+        }
+        .owl-nav .disabled, .owl-nav .disabled:hover{
+            opacity: 0.5;
+        }
+    }
+    .form-container {
+        .form-group-list{
+            .form-group{
+                .form-small-field{margin-right: 0;}
+            }
+        }
+    }
+    
+}
+
+
+.popup-slider{
+    .popup-slider-item{
+        .popup-slider-img{
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 320px) {
+                height: 130px;
+            }
+        }
+        .popup-slider-content{
+            padding: 30px 25px;
+            height: 250px;
+            overflow: hidden;
+            overflow-y: scroll;
+            h2{
+                margin-bottom: 15px;
+                line-height: 25px;
+                font-weight: 500;
+                &.head-withline{
+                    padding-bottom: 20px;
+                    position: relative;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 65px;
+                        height: 4px;
+                        //background: #2AC8E0;
+                        background: $teal-col;
+                        left: 0px;
+                        bottom: 0px;
+                    }
+                    
+                }
+            }
+            p{
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: 320px) {
+                padding: 15px 20px;
+                height: 270px;
+
+                h2{
+                    margin-bottom: 15px;
+                }
+                p{
+                    margin-bottom: 0;
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+            }
+
+        }
+    }
+}
+
+.popup-footer-links{
+    @include flexbox;
+    @include justify-content(flex-end);
+    .btn{
+        margin-left: 10px;
+    }
+}
+
+.popup-close{
+    width: 60px;
+    height:60px;
+    @extend .flex-center;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: 12;
+    cursor: pointer;
+}

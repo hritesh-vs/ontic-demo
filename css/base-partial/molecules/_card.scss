@@ -1,0 +1,8 @@
+.card{
+  .card-head{
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding:15px 20px;
+  }
+}

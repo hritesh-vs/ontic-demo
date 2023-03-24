@@ -1,0 +1,250 @@
+.wrapper{
+  // @include flexbox;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .side-bar{
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    padding: 20px 10px;
+    background-color: $blue-col;
+  }
+}
+.container {
+  height: calc(100% - 80px);
+  flex: 1;
+  @include flexbox;
+  .container-pad {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    transition: all .1s ease-in-out;
+    // height: 100%;
+    @media screen and (max-width: 320px) {
+      padding: 20px 20px 0;
+    }
+    &.no-pad {
+      padding: 0;
+    }
+    &.pad-t-30 {
+      padding-top: 30px;
+    }
+    &.pad-20 {
+      padding: 25px 20px;
+    }
+  }
+}
+.content{
+  // width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  background: #f9f9f9;
+  overflow: hidden;
+  @include flexbox;
+  @include flex-direction(column);
+}
+
+.card-holder{
+  position: relative;
+  flex: 1;
+  max-width: 100%;
+  // height: 100%;
+  transition: all .1s ease-in-out;
+  padding:20px;
+}
+.content-body{
+  flex: 1;
+  height: 100%;
+  @include border-radius(6px);
+  border: 1px solid #E9ECED;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.default-state {
+  @include flexbox;
+  @include justify-content(center);
+  flex: 1;
+  &.full-height {
+    height: calc(100vh - 130px);
+    margin-top: 20px;
+  }
+  .default-state-box {
+    max-width: 300px;
+    margin-top: 50px;
+    .default-icon {
+      margin-bottom: 20px;
+    }
+    .default-info {
+      h4 {
+        margin-bottom: 10px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #1c3947;
+        letter-spacing: 0.18px;
+        line-height: 24px;
+      }
+      p {
+        color: #4c5980;
+      }
+    }
+  }
+}
+
+.internet-error-box {
+  @extend .flex-center;
+  position: absolute;
+  bottom: 40px;
+  .internet-error-txt {
+    background: #fc5252;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 260px;
+    @media screen and (max-width: 320px) {
+      max-width: 213px;
+    }
+    padding: 5px 10px;
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #f4f6fa;
+      letter-spacing: 0.13px;
+      display: block;
+    }
+  }
+  .error-loader {
+    flex: none;
+    @include flexbox;
+    position: relative;
+    margin-right: 10px;
+    img {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .error-circle-box {
+    position: absolute;
+    left: 0;
+    .circle {
+      border-radius: 50%;
+      background-color: #fc5252;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      opacity: 0;
+      animation: scaleIn 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+
+      &:first-child {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 2s;
+      }
+      &:last-child {
+        animation-delay: 3s;
+      }
+    }
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.5, 0.5);
+        opacity: 0.5;
+      }
+      to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.blank-state {
+  @extend .flex-center;
+  position: relative;
+  background-color: #f7f9fa !important;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    background-size: 73px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: grayscale(1);
+  }
+}
+
+.add-cp-box{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(000,000,000,0.10);
+  overflow: hidden;
+  .card-holder{
+    height: calc(100% - 40px);
+    @include flexbox;
+    @include flex-direction(column);
+  }
+}
+
+.alert-group-list{
+  .alert-group{
+    margin-bottom: 20px;
+    .alert-date{
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.2px;
+      color: #686971;
+      margin-bottom: 15px;
+    }
+    .alert-item{
+      @include flexbox;
+      @include justify-content(space-between);
+      @include align-items(center);
+      padding:20px 0;
+      border-bottom: 1px solid #E9E9E9;
+      &:first-child{
+        padding-top: 0;
+      }
+      
+      .status-box{
+        span{
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          color: #2D3748;
+          display: block;
+        }
+        strong{
+          display: block;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #032D23;
+        }
+      }
+    }
+  }
+}
+
+.comment-link{
+  @include flexbox;
+  cursor: pointer;
+  &:before{
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../images/icons/comment.svg) no-repeat center center;
+    margin-right: 5px;
+  }
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  color: $green-col
+}

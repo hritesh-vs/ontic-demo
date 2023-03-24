@@ -1,0 +1,109 @@
+.switcher-tab{
+    display: inline-block;
+    width: 100%;
+    margin: 10px auto 0;
+    text-align: center;
+    .switcher-fieldset{
+        display: inline-block;
+        position: relative; 
+        border-radius: 20px;
+        background-color: $white-col;
+        height: 30px;
+        box-shadow: 0 5px 10px 0 rgba(64,117,205,0.15);
+    }
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        &:focus{
+            outline: 0;
+            background: transparent;
+        } 
+    }
+    label{
+        position: relative;
+        display: inline-block;
+        width: 70px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 26px;
+        color: #62636C;
+        padding: 3px 0;
+        z-index: 1;
+        letter-spacing: .2px;
+        cursor: pointer;
+        text-transform: capitalize;
+        transition: all .3s;
+        text-align: center;
+        background:none;
+        &:focus{
+            outline: 0;
+            background: transparent;
+        }
+    }
+    .switch {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        height: 30px;
+        width: 70px;
+        background-color: #FF9B90;
+        border-radius: 50em;
+        transition: all .3s;
+    } 
+    .switch-one{
+        &:checked{
+            & + label{
+                color: $white-col;
+                border-radius: 20px; 
+                & + .switch{
+                    transform: translate3d(0px, 0px, 0px);    
+                }
+            }
+
+        }
+    }
+    .switch-two{
+        &:checked{
+            & + label{
+                color: $white-col;
+                border-radius: 20px; 
+                & + .switch{
+                    transform: translate3d(73px, 0px, 0px);   
+                }
+            }
+        }
+    }
+    &.switcher-tab-large{  
+        .switcher-fieldset{
+            height: 40px;
+        }
+        label{
+            width: 140px;
+            padding: 6px 0;
+            @media screen and (max-width: 320px) { 
+                width: 120px;
+            }
+        }
+        .switch {
+            height: 40px;
+            width: 140px;
+            @media screen and (max-width: 320px) { 
+                width: 120px;
+            }
+        }
+        .switch-two{
+            &:checked{
+                & + label{
+                    color: $white-col;
+                    border-radius: 20px; 
+                    & + .switch{
+                        transform: translate3d(143px, 0px, 0px); 
+                        @media screen and (max-width: 320px) { 
+                            transform: translate3d(123px, 0px, 0px); 
+                        }  
+                    }
+                }
+            }
+        }
+    }
+}

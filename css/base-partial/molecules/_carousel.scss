@@ -1,0 +1,124 @@
+
+.carousel-item{
+    background: #FFFFFF;
+    box-shadow: 0 5px 10px 0 rgba(64,117,205,0.15);
+    border-radius: 20px;
+    padding:30px;
+    @extend .align-center;
+}
+
+.carousel-img{min-height: 190px;}
+
+.carusel-info{
+    h5{margin-bottom:10px;}
+    p{
+        margin-bottom: 0;
+    }
+}
+
+.burn-level{
+    display: flex;
+    span{
+        width: 16px;
+        height: 16px;
+        margin-right: 2px;
+        background: url('../images/fire.svg') no-repeat left top;
+        filter: grayscale(100%);
+
+        &.filled{
+            filter: none;
+        }
+    }
+    
+}
+
+
+
+//Scroller
+.scroller-section{
+    margin: 30px 0 40px;
+}
+.scroller-list{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        //background-color: #7FE3F0;
+        background-color: #E6F5F5;
+        box-shadow: 0px 5px 10px 0 rgba(64, 117, 205, 0.15);
+        height: 45px;
+        border-radius: 10px;
+        top: 37px;
+    }
+    .scroller{
+        width: 30%;
+        &:last-child{
+            width: 40%;
+            margin-right: 0;
+        }
+    }
+}
+.scroller{
+    position: relative;
+    &:before, &:after{
+        // content: '';
+        // width: 100%;
+        // height: 1px;
+        // position: absolute;
+        // top: 30px;
+        // display: block;
+        // background-color: #717681;
+
+    }
+    &:after{top:60px;}
+    .scroller-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 160px;
+        overflow-y: scroll;
+        span{
+            @extend.flex-center;
+            width:100%;
+            flex:none;
+            height: 40px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.23px;
+            //color: #9C9EB9;
+            color: #708092;
+            text-align: center;
+            @media screen and (max-width: 320px) {
+                font-size: 14px;
+            }
+            &.active{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                color: $black-col;
+                @media screen and (max-width: 320px) {
+                    font-size: 15px;
+                }
+            }
+
+        }
+        
+    }
+}
+.scroller-inner::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* Chrome/Safari/Webkit */
+    }
+}

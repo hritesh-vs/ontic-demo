@@ -1,0 +1,46 @@
+.flt-tag-list{
+  @include flexbox;
+  padding:20px;
+  .flt-tag{
+    border: 1px solid #B8B8B8;
+    min-height: 30px;
+    @include border-radius(25px);
+    font-size: 12px;
+    line-height: 15px;
+    padding:0 20px 0 33px;
+    min-width: 100px;
+    position: relative;
+    margin-right: 15px;
+    @extend .flex-align-center; 
+    align-items: center;
+    background-color: #fff;
+    &:hover{
+      cursor: pointer;
+      background-color: #CFE1D8;
+      border-color:#A2B0A9;
+    }
+    &:before{
+      content:'';
+      width: 18px;
+      height: 18px;
+      @include border-radius(25px);
+      border: 1px solid #B8B8B8;
+      position: absolute;
+      left: 6px;
+      top:0;
+      bottom:0;
+      margin: auto 0;
+      background-color: #fff;
+    }
+    &.active{
+      &:hover{
+        background-color: #fff;
+      }
+      &:before{
+        background: url(../images/icons/tick.svg) no-repeat center center;
+        background-color: $green-col;
+        border-color: $green-col;
+      }
+    }
+  }
+}

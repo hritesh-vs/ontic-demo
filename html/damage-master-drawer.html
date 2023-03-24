@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+    <title>Learning Lab | Admin</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-nav">
+            <div class="nav-logo-holder">
+                <div class="side-nav-logo">
+                    <img src="/images/logo.png">
+                </div>
+            </div>
+            <div class="nav-list">
+                <div class="nav-item" title="Dashboard">
+                    <div class="nav-link">
+                        <span><img src="/images/icons/nav/dashboard.svg"></span>
+                    </div>
+                </div>
+                <div class="nav-item selected" title="Vaults">
+                    <div class="nav-link ">
+                        <span><img src="/images/icons/nav/vaults.svg"></span>
+                    </div>
+                </div>
+                <div class="nav-item" title="Alerts">
+                    <div class="nav-link">
+                        <span><img src="/images/icons/nav/alerts.svg"></span>
+                    </div>
+                </div>
+                <div class="nav-item" title="Audits">
+                    <div class="nav-link">
+                        <span><img src="/images/icons/nav/audits.svg"></span>
+                    </div>
+                </div>
+
+
+            </div><!--nav-list-->
+            <div class="nav-footer">
+                <div class="nav-item" title="Audits">
+                    <div class="nav-link">
+                        <span><img style="width: 36px; " src="/images/icons/nav/logout.svg"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--side-bar-->
+
+        <div class="content">
+            <div class="header">
+                <div class="flex-left">
+                    <h1>Damage Master</h1>
+                </div>
+
+                <div class="flex-right">
+                    <div class="filter-block">
+                        <div class="form-container inline-form-container">
+                            <div class="form-group-list">
+                                <div class="form-group flex">
+                                    <div class="form-small-field search-small-field">
+                                        <input type="text" placeholder="Search by name, partner, district, taluka, state" ng-enter="filters.search()" ng-model="vaults.query" class="ng-pristine ng-valid ng-empty ng-touched">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn small">Add Route</div>
+                </div>
+            </div><!--header-->
+
+            <div class="container">
+                <div class="card-holder pad-20 flex-direction-column">
+                    <div class="content-body table-holder">
+                        <table class="table" style="/* display: none; */">
+                            <thead>
+                                    <tr>
+                                        <th class="col-30"><div>Damage Title</div></th>
+                                        <th class="col-20"><div>Severity</div></th>
+                                        <th class="col-20"><div>Acceptability Flag</div></th>
+                                        <th class="col-20"><div>Include in undertaking</div></th>
+                                        <th class="col-10"></th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-30"><div>Scratches on surface</div></td>
+                                    <td class="col-20"><div>1</div></td>
+                                    <td class="col-20"><div>Yes</div></td>
+                                    <td class="col-20"><div>No</div></td>
+                                    <td class="col-10">
+                                        <div class="act-link-col">
+                                            <div class="act-btn"><img src="/images/icons/preview.svg"></div>
+                                            <div class="act-btn"><img src="/images/icons/delete.svg"></div>
+                                            <div class="act-btn"><img src="/images/icons/hb.svg"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-30"><div>Scratches on surface</div></td>
+                                    <td class="col-20"><div>1</div></td>
+                                    <td class="col-20"><div>Yes</div></td>
+                                    <td class="col-20"><div>No</div></td>
+                                    <td class="col-10">
+                                        <div class="act-link-col">
+                                            <div class="act-btn"><img src="/images/icons/preview.svg"></div>
+                                            <div class="act-btn"><img src="/images/icons/delete.svg"></div>
+                                            <div class="act-btn"><img src="/images/icons/hb.svg"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-30"><div>Scratches on surface</div></td>
+                                    <td class="col-20"><div>1</div></td>
+                                    <td class="col-20"><div>Yes</div></td>
+                                    <td class="col-20"><div>No</div></td>
+                                    <td class="col-10">
+                                        <div class="act-link-col">
+                                            <div class="act-btn"><img src="/images/icons/preview.svg"></div>
+                                            <div class="act-btn"><img src="/images/icons/delete.svg"></div>
+                                            <div class="act-btn"><img src="/images/icons/hb.svg"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pgn-block">
+                        <li class="disabled"><img src="/images/icons/prev-arrow.svg"/></li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>...</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li><img src="/images/icons/next-arrow.svg"/></li>    
+                    </ul>
+                </div>    
+            </div><!--container-->
+        </div>
+
+        <div class="side-drawer-overlay"></div>
+        <div class="side-drawer show">
+            <div class="side-drawer-pad">
+                <div class="side-drawer-head">
+                    <div class="pull-left">
+                        <h2>Add Damage</h2>
+                    </div>
+                    
+                    <div class="side-drawer-cancel">
+                        <img src="/images/icons/cancel.svg" />
+                    </div>
+                </div>
+                <div class="side-drawer-body">
+                    <div class="form-container">
+                        <div class="form-field error">
+                            <label>Damage Title</label>
+                            <input type="text" placeholder="Enter damage title" />
+                            <span class="error-text">This is mandatory</span>
+                        </div>                        
+
+                        <div class="form-field">
+                            <label>Severity</label>
+                            <input type="text" placeholder="Enter severity" />
+                        </div>                        
+
+                        <div class="form-field">
+                            <label>Acceptability Flag</label>
+                            <div class="radio-list">
+                                <label class="radio-item">Yes
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="radio-item">No
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>   
+                        
+                        <div class="form-field">
+                            <label>Include in undertaking</label>
+                            <div class="radio-list">
+                                <label class="radio-item">Yes
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="radio-item">No
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>   
+
+                        <div class="form-field">
+                            <label>Description</label>
+                            <textarea row="3" placeholder="Enter instructions to appraisal"></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="btn">Add Damage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div><!--wrapper-->
+
+
+
+</body>
+</html>
