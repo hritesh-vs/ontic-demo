@@ -42,25 +42,6 @@
   }
 }
 
-// .popup-footer{
-//   .btn{
-//     width: unset;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 16px;
-//     color: $white-col;
-//     letter-spacing: 0.2px;
-//     text-align: center;
-//     height: 48px;
-//     background: $teal-col;
-//     @include border-radius(8px);
-//     @extend .flex-center;
-//     outline: none;
-//     border: none;
-//     padding: 0px 0px;
-//     font-family: 'Inter', sans-serif;
-//   }
-// }
 
 .disabled,
 .btn.disabled {
@@ -494,5 +475,32 @@
     min-width: 150px;
     margin-right: 10px;
     &:last-child{margin-right: 0;}
+  }
+}
+
+
+/*Ritesh Css */
+
+.prim-btn{
+  background: $blue-col;
+  padding: 9px 15px;
+  color: $white-col;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.27px;
+  &:hover{
+    opacity: 0.9;
+    transition: all 0.3s;
+  }
+}
+
+.btn-img{
+  display: flex;
+  align-items: center;
+  img{
+    margin-right: 5px;
   }
 }

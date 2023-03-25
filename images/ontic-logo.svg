@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.677" height="37" viewBox="0 0 56.677 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.88" y1="0.396" x2="0.084" y2="0.665" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#41b7e2"/>
+      <stop offset="0.296" stop-color="#4698e2"/>
+      <stop offset="0.938" stop-color="#544ae2"/>
+      <stop offset="1" stop-color="#5643e2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.17" y1="0.669" x2="0.846" y2="0.292" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_10" data-name="Group 10" transform="translate(-40.323 -20.5)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-1004.404 -109.343)">
+      <path id="Path_1" data-name="Path 1" d="M1083.7,150.75a16.335,16.335,0,0,1-7.13,19.238c-.054.034-.107.068-.162.1l-.053.033,0,0a9.484,9.484,0,0,1-10.126-16.028,16.308,16.308,0,0,0-6.835,19.057,16.527,16.527,0,0,0,24.309-22.4Z" transform="translate(-10.287 -15.574)" fill="url(#linear-gradient)"/>
+      <path id="Path_2" data-name="Path 2" d="M1055.94,138.518a9.484,9.484,0,1,1,10.343,15.9,16.335,16.335,0,0,0,7.13-19.238,16.527,16.527,0,1,0-24.309,22.4,16.308,16.308,0,0,1,6.835-19.057Z" fill="url(#linear-gradient-2)"/>
+    </g>
+    <text id="_2S" data-name="2S" transform="translate(75 52.5)" fill="#475269" font-size="20" font-family="AvertaCYW01-Bold, Averta CY W01" font-weight="700"><tspan x="0" y="0">2</tspan><tspan y="0" font-size="19">S</tspan></text>
+  </g>
+</svg>

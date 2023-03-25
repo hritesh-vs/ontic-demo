@@ -6,17 +6,59 @@ body,
 .header{
   justify-content: space-between;
   position: relative;
-  height: 70px;
   flex:none;
-  padding: 0 20px 0;
-  // background-color: $white-col;
+  box-shadow: 0px 3px 4px #0000000B;
+  background-color: $white-col;
   z-index: 3;
-  // box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
   @include flexbox;
   align-items: center;
-  .big-act-btn{
-    width: 40px;
+  
+
+  .header-pad{
+    padding: 20px 0px 0;
+  }
+
+  .header-nav-list{
+    @include flexbox;
+    li {
+      margin-right: 40px;
+      padding-bottom: 18px;
+        a {
+          font-size: 21px;
+          line-height: 27px;
+          color: #475269;
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+        .prim-btn{
+          color: $white-col;
+        }
+        &.active, &:hover {
+          border-bottom: 5px solid #2E56BE;
+          a {
+            color: #2E56BE;
+            font-weight: 600;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+          &:hover{
+            border-bottom: 0;
+            a{
+              color: $white-col;
+            }
+          }
+        }
+      }
+     
+      
+  }
+
+  .sm-logo{
+    margin-right: 59px;
   }
 }
 .head-shadow{
@@ -90,4 +132,23 @@ body,
     opacity: 0.7;
   }
 
+}
+
+/* ritesh css */
+.search-box{
+  input{
+    border: 1px solid #CDD7E6;
+    background-color: $white-col;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .user-icon{
+    margin-left: 15px;
+    flex: none;
+    img{
+      display: block;
+      width: 44px;
+      height: 44px;
+    }
+  }
 }

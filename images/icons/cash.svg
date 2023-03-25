@@ -1,9 +1,0 @@
-
-<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="cash" fill="#7BB0FF" fill-rule="nonzero">
-            <polygon id="Path" points="0 3 8 0 16 2.5 16 5 0 5"></polygon>
-            <polygon id="Path" points="9 7 11 7 11 12 13 12 13 7 15 7 15 13 16 13 16 15 0 15 0 13 1 13 1 7 3 7 3 12 5 12 5 7 7 7 7 12 9 12"></polygon>
-        </g>
-    </g>
-</svg>

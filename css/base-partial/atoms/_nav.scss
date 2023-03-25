@@ -1,10 +1,11 @@
 .side-nav{
-  width: 50px;
+  width: 250px;
   transition: all .1s ease-in-out;
   position: fixed;
   height: 100%;
   z-index: 9;
-  background-color: $orange-col;
+  padding-top: 30px;
+  border-right: 2px solid #DDE0E0;
   @include flexbox;
   @include flex-direction(column);
   .nav-logo-holder{
@@ -18,89 +19,29 @@
       @extend .flex-center;
     }
   }
+  .active-project-block {
+    padding: 0 40px 20px;
+    border-bottom: 2px solid #ECEDED;
+    cursor: pointer;
+    .project-img {
+      margin-right: 12px;
+    }
+    .project-info{
+      span{
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0px;
+        color: #71798A;
+        display: block;
+      }
+    }
+  }
   .nav-list{
     flex: 1;
     @include flexbox;
     @include flex-direction(column);
     
-    .nav-item{
-      padding:20px 0;
-      position: relative;
-      cursor: pointer;
-      .nav-link{
-        text-align: center;
-        span{
-          display: block;
-          text-align: center;
-          img{
-            filter: brightness(0) invert(1);
-          }
-        }
-        strong{
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 17px;
-          text-transform: capitalize;
-          color: $white-col;
-        }
-      }
-      ul{
-        position: absolute;
-        left: 50px;
-        top:0;
-        background-color: #0044AD;
-        @include flexbox;
-        @include flex-direction(column);
-        box-shadow: inset 2px 0px 14px rgba(0, 0, 0, 0.2);
-        display: none;
-        padding:15px 20px;
-        border-radius: 0 10px 10px 0;
-        li{
-          font-style: normal;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 21px;
-          text-transform: capitalize;
-          color: #ffffff;
-          //margin: 15px 20px;
-          padding:8px 10px;
-          margin:5px 0;
-          cursor: pointer;
-          @include border-radius(5px);
-          min-width: 80px;
-
-          &:hover{
-            background-color: #0C56C9;
-          }
-
-          &.nav-title{
-            font-weight: 800;
-            text-transform: uppercase;
-            &:hover{
-              background: none;
-              cursor: default;
-            }
-          }
-        }
-
-        
-
-      }
-      &:hover, &.selected{
-        background-color: #BB5B28;
-        // background-color: rgba( 000,000,000,0.2);
-        .nav-link{
-          span{
-            img{filter: none;}
-          }
-          strong{
-            color: #7BB0FF;
-          }
-        }    
-        ul{display: block;}
-      }
-
-    }
+   
   }
 
   .nav-footer{

@@ -70,6 +70,11 @@
   @include align-items(center);
   @include justify-content(space-between);
 }
+.flex-end{
+  @include flexbox;
+  @include align-items(flex-end);
+  @include justify-content(flex-start);
+}
 .flex-bottom {
   @include flexbox;
   @include align-items(flex-end);
