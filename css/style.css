@@ -3205,6 +3205,7 @@ body,
 .search-box .user-icon {
   margin-left: 15px;
   flex: none;
+  cursor: pointer;
 }
 .search-box .user-icon img {
   display: block;
@@ -3577,6 +3578,7 @@ body,
   line-height: 25px;
   letter-spacing: 0px;
   color: #475269;
+  text-transform: capitalize;
 }
 .menu-block .menu-item .inner-menu-list li a.active, .menu-block .menu-item .inner-menu-list li a:hover {
   background-color: #F2F5FA;
